@@ -1,5 +1,7 @@
 import pandas as pd
 
+# faz o agrupamneto das especialidades demonstrando a quantidade total para cada especialidade
+# alem de destacar a porcentagem em relação a quntidade total de respostas
 def group_speciality_quantity(df):
     df_group = df.groupby("Questão1")["ID"].count().rename("Times Chosen").reset_index()
 
@@ -20,9 +22,7 @@ def add_speciality_percentage_column(df_group):
 #          -> e que os valores do sgundo parametro são os identificadores das colunas
 #          -> as linhas desse DataFrama apresnetam a contagem de ocorrencias entre os valores de linha e coluna
 # ex:
-#
-# Questão2               1-3 anos  4-7 anos  8-15 anos  Mais de 15 anos  Menos de 1 ano
-# Questão1                                                                             
+#                          1-3 anos  4-7 anos  8-15 anos  Mais de 15 anos  Menos de 1 ano                                                 
 # Médico Especialista           0        10         11               11               0
 # Médico Residente             10         0          0                0               6
 # Técnico em Radiologia         1         0          0                0               1
