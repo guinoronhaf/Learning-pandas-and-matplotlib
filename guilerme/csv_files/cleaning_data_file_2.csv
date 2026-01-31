@@ -1,0 +1,21 @@
+ID,Nome,Idade,Data de Registro,Salario,Ativo,ID Departamento
+1,Cláudio Roberto Silva,29,2024-02-15,6200.50,True,2
+2,Thiago Oliveira,38,2021-08-12,4500.0,True,5
+3,Mariana Souza,42,2023-11-20,7150.75,True,1
+4,Ricardo Almeida,,2022-05-30,5800.00,False,
+5,Beatriz Nunes,31,2020-12-14,9200.30,,
+6,Enzo Silveira,24,2024-01-10,3400.0,True,
+7,Larissa Duarte,27,2022-04-18,5100.25,,
+8,Marcos Vinícius Pontes,55,2023-09-02,8900.40,True,3
+9,Patrícia Abravanel,33,2021-10-11,4200.15,,2
+10,Roberto Carlos Fontes,,2023-06-15,7500.60,,5
+11,Letícia Spiller,,2022-02-28,4900.90,,
+12,Juliana Paiva,,2021-07-19,8300.20,False,
+13,Dr. Arthur Mendes,,2023-03-22,6400.45,True,
+14,Felipe Castro,40,,5700.80,True,
+15,Camila Rocha,35,,6100.35,True,4
+16,Sérgio Loroza,22,,4800.60,False,
+17,Mônica Iozzi,46,2024-05-09,7300.10,False,1
+18,Gustavo Lima,30,2022-08-25,6900.95,False,2
+19,Fernanda Montenegro,26,2023-12-01,7200.55,False,3
+20,Otávio Mesquita,49,2021-01-15,5900.20,True,5

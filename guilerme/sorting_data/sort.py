@@ -9,4 +9,4 @@ print(df.sort_values(by='Salario')) # ordem crescente (default)
 
 print("--------------")
 
-print(df.sort_values(by='Salario', ascending=False))
+print(df.sort_values(by='Salario', ascending=False)) # ordem decrescente agora
