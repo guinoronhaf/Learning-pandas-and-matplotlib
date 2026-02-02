@@ -7,6 +7,8 @@ def group_speciality_quantity(df):
 
     df_group_percent = add_speciality_percentage_column(df_group)
 
+    df_group_percent.set_index('Questão1', inplace=True)
+
     return df_group_percent.rename(columns={"Questão1": "Specialisties"})
 
 # adiciona a coluna de porcentagem sob a quantidade
@@ -41,14 +43,15 @@ def group_percentage_years_specialist(df_orig):
     return df_order_columns
 
 
-df = pd.read_csv("questionary_sheet.csv")
+if __name__ == "__main__":
+    df = pd.read_csv("questionary_sheet.csv")
 
-print("\n")
-print("Dataframes sobre os anos para cada especialidade e sobre a quantidade, juntamente com a porcentagem: ")
-print("\n============\n")
+    print("\n")
+    print("Dataframes sobre os anos para cada especialidade e sobre a quantidade, juntamente com a porcentagem: ")
+    print("\n============\n")
 
-print(group_percentage_years_specialist(df))
-print("\n============\n")
+    print(group_percentage_years_specialist(df))
+    print("\n============\n")
 
-print(group_speciality_quantity(df))
+    print(group_speciality_quantity(df))
 
