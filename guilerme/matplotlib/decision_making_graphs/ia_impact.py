@@ -8,9 +8,9 @@ categories = ("Sim", "Não tenho certeza", "Não")
 fields = ("mais_seg", "menos_seg", "ia_descord")
 total_answers = (df[fields[0]]).count()
 answer_values = {
-        "mais_seg": [(float((df[df['mais_seg'] == cat]).nunique()['data_hora']/total_answers))*100 for cat in categories],
-        "menos_seg": [(float((df[df['menos_seg'] == cat]).nunique()['data_hora']/total_answers))*100 for cat in categories],
-        "ia_descord": [(float((df[df['ia_descord'] == cat]).nunique()['data_hora']/total_answers))*100 for cat in categories],
+        "Você se sentiria mais seguro(a) em relação a seu diagnóstico se um sistema de IA concordasse com sua interpretação?": [(float((df[df['mais_seg'] == cat]).nunique()['data_hora']/total_answers))*100 for cat in categories],
+        "Você se sentiria menos seguro(a) em relação a seu diagnóstico se um sistema de IA discordasse de sua interpretação?": [(float((df[df['menos_seg'] == cat]).nunique()['data_hora']/total_answers))*100 for cat in categories],
+        "Se uma IA discordasse de sua interpretação de imagens, isso faria você buscar uma segunda opinião em relação à sua decisão inicial?": [(float((df[df['ia_descord'] == cat]).nunique()['data_hora']/total_answers))*100 for cat in categories],
 }
 
 x = np.arange(len(categories)) 
