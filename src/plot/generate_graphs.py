@@ -118,7 +118,7 @@ def generate_graph_4(df: pd.DataFrame):
 
     plt.savefig(PATH + "graph4.png")
 
-    plt.clf
+    plt.clf()
 
 def generate_graph_6(df: pd.DataFrame):
     df_to_plot = get_data_frame_app_rate(df)
