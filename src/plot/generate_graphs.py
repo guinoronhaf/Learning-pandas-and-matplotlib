@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 from ..aux.auxiliar_functions import *
 
 PATH = 'data/graphs/'
+ID_FIELD = 'data_hora'
 
 def generate_graph_1(df):
     df_speciality = group_speciality_quantity(df)
@@ -68,7 +69,7 @@ def generate_graph_3(df: pd.DataFrame):
             "Se uma IA discordasse de sua interpretação de imagens, isso faria você buscar uma segunda opinião em relação à sua decisão inicial?": "ia_descord"
     }
     total_answers = 40
-    answer_values = {quest_k: [float((df[df[question_categories[quest_k]] == cat]).nunique()['data_hora']/total_answers)*100 for cat in answer_categories] for quest_k in question_categories.keys()}
+    answer_values = {quest_k: [float((df[df[question_categories[quest_k]] == cat]).nunique()[ID_FIELD]/total_answers)*100 for cat in answer_categories] for quest_k in question_categories.keys()}
    
     x = np.arange(len(answer_categories))
     width = 0.25
@@ -93,6 +94,29 @@ def generate_graph_3(df: pd.DataFrame):
     ax.set_ylim(0, 80)
 
     plt.savefig(PATH + "graph3.png")
+
+    plt.clf()
+
+def generate_graph_4(df: pd.DataFrame):
+    title = "Em uma escala de 0 a 10, o quão confiável você considera so sistemas de IA para uso no auxílio de interpretação de imagens? (0 = sem confiança, 10 = confiança absoluta)"
+
+    total_answers = (df['ia_confiavel']).count()
+
+    categories = range(0, 11)
+
+    values_to_plot = [float((df[df['ia_confiavel'] == cat]).nunique()[ID_FIELD]/total_answers)*100 for cat in categories]
+
+    fig, ax = plt.subplots(figsize=(12, 8))
+    rects = ax.bar(categories, values_to_plot, color='w', edgecolor='k', width=0.5, linewidth=1.5)
+
+    ax.bar_label(rects, padding=3, fmt='%1.f')
+
+    ax.set_xticks(range(len(categories)))
+    ax.set_ylabel('%')
+    ax.set_title(title)
+    ax.set_ylim(0, max(values_to_plot) + 5)
+
+    plt.savefig(PATH + "graph4.png")
 
     plt.clf()
 
