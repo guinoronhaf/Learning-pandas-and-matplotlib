@@ -6,14 +6,17 @@ if __name__ == "__main__":
     
     df = pd.read_csv(CSV_PATH)
 
-    # print("\nGENERATING THE GRAPHS:\n")
-    # g.generate_graph_1(df)
-    # print("graph1 is OK")
-    # g.generate_graph_2(df)
-    # print("graph2 is OK")
-    # g.generate_graph_3(df)
-    # print("graph3 is OK")
-    # g.generate_graph_6(df)
-    # print("graph6 is OK")
-    
-    g.generate_graph_4(df)
+    try:
+        print("\nGENERATING THE GRAPHS:\n")
+        g.generate_graph_1(df)
+        print("graph1 is OK")
+        g.generate_graph_2(df)
+        print("graph2 is OK")
+        g.generate_graph_3(df)
+        print("graph3 is OK")
+        g.generate_graph_4(df)
+        print("graph4 is OK")
+        g.generate_graph_6(df)
+        print("graph6 is OK")
+    except:
+        print("Something got wrong...")

@@ -106,19 +106,19 @@ def generate_graph_4(df: pd.DataFrame):
 
     values_to_plot = [float((df[df['ia_confiavel'] == cat]).nunique()[ID_FIELD]/total_answers)*100 for cat in categories]
 
-    fig, ax = plt.subplots(figsize=(12, 8))
+    fig, ax = plt.subplots(figsize=(18, 8))
     rects = ax.bar(categories, values_to_plot, color='w', edgecolor='k', width=0.5, linewidth=1.5)
 
     ax.bar_label(rects, padding=3, fmt='%1.f')
 
     ax.set_xticks(range(len(categories)))
     ax.set_ylabel('%')
-    ax.set_title(title)
+    ax.set_title(title, pad=20)
     ax.set_ylim(0, max(values_to_plot) + 5)
 
     plt.savefig(PATH + "graph4.png")
 
-    plt.clf()
+    plt.clf
 
 def generate_graph_6(df: pd.DataFrame):
     df_to_plot = get_data_frame_app_rate(df)
