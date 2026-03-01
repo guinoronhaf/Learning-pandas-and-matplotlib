@@ -1,5 +1,6 @@
 import pandas as pd
 import generate_graphs as gng
+import generate_stats as gns
 
 DATA_PATH = "../data/answers/mockup_respostas.csv"
 df = pd.read_csv(DATA_PATH)
@@ -8,6 +9,8 @@ def main_generate_graphs(df: pd.DataFrame):
     gng.generate_graph1(df)
     gng.generate_graph2(df)
     gng.generate_graph3(df)
+
+def main_generate_stats
 
 
 if __name__ == '__main__':
