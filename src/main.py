@@ -3,7 +3,7 @@ from .plot import generate_graphs as gng
 from .stats import generate_stats as gns
 
 if __name__ == "__main__":
-    CSV_PATH = "data/csv_files/mockup/respostas_questionario.csv"
+    CSV_PATH = "data/csv_files/respostas.csv"
     
     df = pd.read_csv(CSV_PATH)
 
