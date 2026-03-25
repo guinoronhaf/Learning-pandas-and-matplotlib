@@ -112,3 +112,14 @@ pip install -r ./requirements.txt
 ```bash
 pytho3 -m src.main
 ```
+
+---
+
+## Contribuidores
+
+ - [Guilherme Fragoso](https://github.com/guinoronhaf)
+ - [João Ventura](https://github.com/joaoneto9)
+
+---
+
+Repositório componente de projeto de pesquisa associado a Unidade Acadêmica de Sistemas e Computação da Universidade Federal de Campina Grande (UASC/UFCG). A orientação do projeto é do Professor Dr. [Tiago Massoni](https://github.com/tiagomassoni).
